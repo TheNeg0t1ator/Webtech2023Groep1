@@ -4,14 +4,15 @@
   --color1: #fdfdf8;
   --color2: #d8d5db;
   --color3: #62B8E7;
-  --color4: #4d5262;
+  --color4: #9eb2d5;
   --color5: #18AAE1;
   --color6: #000000;
   --color7: #FEC715;
+  --backcolor: #d7dae7;
 }
 
 body {
-  background-color: var(--color1);
+  background-color: var(--backcolor);
 }
 
 .centered {
