@@ -77,6 +77,18 @@ body {
   font-size: 20px;
 }
 
+  #myProgress {
+    width: 100%;
+    background-color: var(--color3);
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: var(--color7);
+  }
+
+  
 .main {
     padding: 16px;
     margin-top: var(--NAV_MARG);
@@ -88,6 +100,7 @@ body {
      margin-top: calc(12*var(--NAV_MARG));
     }
   }
+
 
 
 
