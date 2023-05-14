@@ -1,20 +1,27 @@
 var i = 0;
-      function move() {
+      function move(element_id, max_length) {
         if (i == 0) {
           i = 1;
-          var elem = document.getElementById("myBar");
-          var width = 1;
+          var elem = document.getElementById(element_id);
+          var width = 0;
           var id = setInterval(frame, 10);
           function frame() {
-            if (width >= 100) {
+            if (width >= max_length) {
               clearInterval(id);
               i = 0;
-              show('test');
-              Ajax_request();
+              //show('test');
+              if(element_id == 'myBar'){
+                Ajax_request();
+              }
+              
             } else {
-                if(width == 1){hide('test');}
-
-              width++;
+              //if(width == 1){hide('test');}
+              if(element_id == 'myBar'){
+                width++;
+              }else{
+                width += 2;
+              }
+              
               elem.style.width = width + "%";
             }
           }
@@ -48,5 +55,6 @@ var i = 0;
         console.log(WeatherData[0].temp);
         var elem = document.getElementById("myDataBar");
         elem.style.width = WeatherData[0].temp*2 + "%";
-
+        
+        move('myDataBar', WeatherData[0].temp*2);
        }

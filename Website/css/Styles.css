@@ -83,7 +83,7 @@ body {
   }
   
   #myBar {
-    width: 1%;
+    width: 0%;
     height: 30px;
     background-color: var(--color7);
   }
@@ -93,7 +93,7 @@ body {
   }
   
   #myDataBar {
-    width: 1%;
+    width: 0%;
     height: 30px;
     background-color: var(--color7);
   }
