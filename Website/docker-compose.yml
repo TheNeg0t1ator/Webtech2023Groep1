@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  caddy:
+    image: caddy:2.4.5
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - %cd%/Caddyfile:/etc/caddy/Caddyfile
+      - %cd%/site/Website:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
