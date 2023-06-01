@@ -55,6 +55,7 @@ var i = 0;
         console.log(WeatherData[0].temp);
         var elem = document.getElementById("myDataBar");
         elem.style.width = WeatherData[0].temp*2 + "%";
+        document.getElementById('tempofPynq').innerHTML = WeatherData[0].temp;
         
         move('myDataBar', WeatherData[0].temp*2);
        }
