@@ -1,5 +1,4 @@
 :root {
-  
   --NAV_MARG: 12px;
   --color1: #fdfdf8;
   --color2: #d8d5db;
@@ -13,23 +12,25 @@
 
 body {
   background-color: var(--backcolor);
+  margin: 0; /* Reset default margin to remove spacing */
+  padding-top: var(--NAV_MARG); /* Add spacing below navbar */
 }
 
 .centered {
   text-align: center;
 }
 
-.navbar {  
+.navbar {
   overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   background-color: var(--color3);
   overflow: auto;
+  z-index: 1; /* Ensure navbar is on top */
 }
 
-/* Navigation links */
 .navbar a {
   font-family: Verdana, sans-serif;
   float: left;
@@ -37,32 +38,28 @@ body {
   color: var(--color6);
   text-decoration: none;
   font-size: 24px;
-  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-  text-align: center; /* If you want the text to be centered */
+  width: 25%;
+  text-align: center;
 }
 
-/* Add a background color on mouse-over */
 .navbar a:hover {
-    background-color: var(--color4);
-    color: var(--color7);
-  }
-  
+  background-color: var(--color4);
+  color: var(--color7);
+}
 
-  /* Style the current/active link */
 .navbar a.active {
-    background-color:var(--color5);
-    color: var(--color7);
-  }
-  
+  background-color: var(--color5);
+  color: var(--color7);
+}
 
 @media screen and (max-width: 600px) {
-    .navbar a {
-      float: none;
-      display: block;
-      width: 100%;
-      text-align: center; /* If you want the text to be left-aligned on small screens */
-    }
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
+}
 
 .MainTitle {
   text-align: center;
@@ -71,48 +68,97 @@ body {
   color: #f8ff77;
 }
 
-.SmallArial{
+.SmallArial {
   margin-top: 50px;
-  font-family:Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 20px;
 }
 
-  #myProgress {
-    width: 100%;
-    background-color: var(--color3);
-  }
-  
-  #myBar {
-    width: 0%;
-    height: 30px;
-    background-color: var(--color7);
-  }
-  #myData {
-    width: 100%;
-    background-color: var(--color3);
-  }
-  
-  #myDataBar {
-    width: 0%;
-    height: 30px;
-    background-color: var(--color7);
-  }
-  
+#myProgress {
+  width: 100%;
+  background-color: var(--color3);
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: var(--color7);
+}
+
+#myData {
+  width: 100%;
+  background-color: var(--color3);
+}
+
+#myDataBar {
+  width: 0%;
+  height: 30px;
+  background-color: var(--color7);
+}
+
 .main {
-    padding: 16px;
-    margin-top: var(--NAV_MARG);
-    height: 1500px; /* Used in this example to enable scrolling */
+  padding: 16px;
+  margin-top: var(--NAV_MARG);
+  height: 1500px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    margin-top: calc(12 * var(--NAV_MARG));
   }
+}
 
-  @media screen and (max-width: 600px) {
-    .main{
-     margin-top: calc(12*var(--NAV_MARG));
-    }
-  }
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align profiles at the top */
+  margin-top: 50px;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+}
 
 
+.profile {
+  flex: 0 10 auto;
+  width: 300px;
+  margin: 0 10px;
+  text-align: center;
+}
 
+.profile img {
+  width: 100%;
+  height: 200px;
+  object-fit: auto;
+  border-radius: 800%;
+}
+.livestream {
+  position: relative;
+  padding-top: 56.25%; /* Set the aspect ratio (16:9) for responsive video */
+  margin-top: 20px; /* Add margin to move the video below the blue bars */
+}
 
-
-
+.livestream iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   
+}
+@media (max-width: 600px) {
+  .profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  .profile {
+    width: 100%;
+    text-align: center;
+  }
+}
+.image-limit {
+  max-width: 100%;
+}
+
