@@ -117,21 +117,31 @@ body {
   overflow-y: auto;
   white-space: nowrap;
 }
+    /* Add the CSS code here */
+    .profile-image {
+      display: block;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto; /* Add this line */
+    }
+    
+    .profile-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .profile {
+      flex: 1 0 300px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      text-align: center;
+    }
 
-
-.profile {
-  flex: 0 10 auto;
-  width: 300px;
-  margin: 0 10px;
-  text-align: center;
-}
-
-.profile img {
-  width: 100%;
-  height: 200px;
-  object-fit: auto;
-  border-radius: 800%;
-}
 .livestream {
   position: relative;
   padding-top: 56.25%; /* Set the aspect ratio (16:9) for responsive video */
@@ -161,4 +171,61 @@ body {
 .image-limit {
   max-width: 100%;
 }
+chapter img {
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.chapter img {
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Add this CSS code */
+#chapter1 {
+  background-color: #f5f5f5;
+  background-image: url('pattern1.png');
+  text-align: center;
+  padding: 50px;
+}
+
+#chapter2 {
+  background-color: #fff;
+  background-image: url('pattern2.png');
+  text-align: center;
+  padding: 50px;
+}
+
+#chapter3 {
+  background-color: #f5f5f5;
+  background-image: url('pattern3.png');
+  text-align: center;
+  padding: 50px;
+}
+
+#chapter4 {
+  background-color: #fff;
+  background-image: url('pattern4.png');
+  text-align: center;
+  padding: 50px;
+}
+
+.bordered {
+  background-color: #fff;
+  background-image: url('pattern4.png');
+  text-align: center;
+  padding: 50px;
+}
+.block-text {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+
 
