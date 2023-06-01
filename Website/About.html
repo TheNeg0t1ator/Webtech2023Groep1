@@ -5,13 +5,31 @@
   <title>About</title>
   <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
   <style>
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .profile {
+      text-align: center;
+      width: 300px;
+      margin: 20px;
+    }
     .profile img {
       width: 200px;
-      height: 200px;
       border-radius: 50%;
     }
-    body {
-      overflow: hidden;
+    .profile h2 {
+      margin-top: 20px;
+    }
+    .profile p {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 600px) {
+      .profile {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -32,44 +50,18 @@
           Dit is het project van Kobe Dieryck, Thomas Fokkema, Samy Warnants en Ceyhan Yildiz!
         </p>
          <div class="centered">
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <title>Profiles</title>
-            <style>
-              .profile-container {
-                display: flex;
-                justify-content: space-around;
-                margin-top: 50px;
-              }
-              .profile {
-                text-align: center;
-              }
-              .profile img {
-                width: 200px;
-                border-radius: 50%;
-              }
-              .profile h2 {
-                margin-top: 20px;
-              }
-              .profile p {
-                margin-bottom: 10px;
-              }
-            </style>
-          </head>
-          <body>
             <div class="profile-container">
               <div class="profile">
                 <img src="https://cdn.discordapp.com/attachments/1021337182532812852/1113460441109237872/kobe.png" alt="Profile Image 1">
                 <h2>Kobe Dieryck</h2>
-                <p>Email: <a href="mailto:Kobe.Dieryck@gmail.com">Kobe.Dieryck@gmail.com</a></p>
+                <a href="mailto:kobe.dieryck@icloud.com">kobe.dieryck@icloud.com</a>
                 <p>Tel: 112</p>
                 <p>Location: unknown, Tongeren</p>
               </div>
               <div class="profile">
                 <img src="https://cdn.discordapp.com/attachments/650311318175219753/1099314709951434943/image.png" alt="Profile Image 2">
                 <h2>Thomas Fokkema</h2>
-                <p>Email: <a href="mailto:Thomas.fokkemah@example.com">Thomas.fokkemah@example.com</a></p>
+                <p>Email: <a href="mailto:Thomas.fokkema@example.com">Thomas.fokkema@example.com</a></p>
                 <p>Tel: 987-654-3210</p>
                 <p>Location: no-one, knows</p>
               </div>
@@ -86,6 +78,7 @@
                 <p>Email: <a href="mailto:kingkong.cy@gmail.com">kingkong.cy@gmail.com</a></p>
                 <p>Discord: Cεy with a J#8073</p>
                 <p>Location: Eindhoven or Bilzen or Erzincan,<br>Nederland or België or Turkije</p>
+              </div>
             </div>
           </div>
         </div>
