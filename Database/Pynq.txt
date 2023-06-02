@@ -2,4 +2,4 @@ I have used the tutorial from this video: https://www.youtube.com/watch?v=_wxUB7
 The pynq is currently sending data to nowhere. Because the php api that was made is not working correctly
 here is proof of me with the pynq!
 
-[20230601_195205](https://github.com/TheNeg0t1ator/Webtech2023Groep1/assets/114076126/cf874ba9-0406-4a6e-bfbc-3758439159f5)
+
